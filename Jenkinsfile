@@ -4,13 +4,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                echo "Pulling latest code..."
-                checkout scm
-            }
-        }
-
         stage('Build') {
             steps {
                 echo "Building Docker image..."
