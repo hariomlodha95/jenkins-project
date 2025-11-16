@@ -34,8 +34,8 @@ pipeline {
                 echo "Deploying container..."
                 sh '''
                 docker rm -f myapp || true
-                docker pull $USERNAME/myapp:latest
-                docker run -d -p 3000:3000 --name myapp $USERNAME/myapp:latest
+                docker pull hariomlodha/myapp:latest
+                docker run -d -p 3000:3000 --name myapp hariomlodha/myapp:latest
                 '''
             }
         }
